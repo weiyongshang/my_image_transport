@@ -18,7 +18,7 @@ int main(int argc, char** argv)
     if(!nh.ok())
         break;
     std::ostringstream stringStream;
-    stringStream << "/home/camero/" << i << ".jpg";
+    stringStream << "/home/weiyongshnag/camero/" << i << ".jpg";
     cv::Mat image = cv::imread(stringStream.str(), CV_LOAD_IMAGE_COLOR);
     sensor_msgs::ImagePtr msg = cv_bridge::CvImage(std_msgs::Header(), "bgr8", image).toImageMsg();
  
